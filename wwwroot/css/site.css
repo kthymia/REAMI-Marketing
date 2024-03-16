@@ -1,0 +1,167 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+* {
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    background-color: #f3f3f4 !important;
+}
+
+.main-container {
+    height: 95vh;
+    padding: 2rem;
+    width:85%;
+    border-radius:20px;
+}
+    .main-container nav {
+        display: flex;
+        flex-direction: column;
+        width: 15%;
+        overflow-y: scroll;
+        overflow-x:hidden;
+    }
+
+        /* Scrollbar Styles */
+        .main-container nav::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        .main-container nav::-webkit-scrollbar-track {
+            background-color: #FCFCFC; /* Adjusted color */
+        }
+
+        .main-container nav::-webkit-scrollbar-thumb {
+            background-color: #CCCCCC; /* Thumb color */
+            border-radius: 5px;
+        }
+
+a{
+    text-decoration:none;
+    color:black;
+}
+
+a:hover{
+    color:black;
+    font-weight:bolder;
+}
+
+  h5{
+      text-align:center;
+  } 
+.main-container nav div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    width: 60%;
+    background-color: #e6e6e7;
+    margin: 0 0 1rem auto;
+    transition: box-shadow 0.3s;
+   
+}
+
+    .main-container nav div:hover {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        background-color: #FCFCFC;
+
+    }
+
+       
+
+
+
+    .main-container nav div i {
+        color: #878787;
+        font-size: 20px;
+        transition: color 0.3s; /* Smooth  for color change */
+    }
+
+        .main-container nav div:hover i {
+            color: #7cc43f;
+        }
+
+        .main-container nav div span{
+            text-transform:uppercase;
+            margin-top:.5rem;
+            text-align:center;
+        }
+
+
+.main-container nav .active {
+    background-color: #FCFCFC;
+    font-weight: bolder;
+}
+        .main-container nav .active i {
+            color: #7cc43f;
+        }
+main {
+    background-color: #FCFCFC;
+    width: 85%;
+    padding:3.5rem;
+}
+footer{
+    padding:0 3rem;
+}
+
+.content{
+    width:100%;
+    min-height:60rem;
+    background-color:transparent;
+}
+
+
+
+/* Styles for loading animation */
+#loading-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 1);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinner {
+    border: 5px solid rgba(0, 0, 0, 0.1);
+    border-left-color: #333;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Hide loading animation once document is fully loaded */
+.loaded #loading-animation {
+    display: none;
+}
