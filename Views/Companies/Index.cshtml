@@ -1,0 +1,49 @@
+﻿@model IEnumerable<REAMI_Marketing_Sales___Inventory_System.Models.Company>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1><p>
+    <a asp-action="Create" class="btn float-end" style="background-color:#6cc02b;color:white;">
+        Create New <i class="fas fa-plus"></i>
+    </a>
+</p>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Company_Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Contact)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Location)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Company_Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Contact)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Location)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Company_ID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Company_ID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Company_ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
