@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\REAMI Marketing Sales &amp; Inventory System.props" />
+</Project>

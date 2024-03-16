@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\REAMI Marketing Sales &amp; Inventory System.props" />
+</Project>
